@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recursos del Máster · RRHH · Universidad Europea</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e0d0c;--paper:#f4f1eb;--cream:#ede8df;--accent:#c94b2a;--muted:#7a7268;--border:rgba(14,13,12,0.11);--card:#ffffff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Instrument Sans',sans-serif;background:var(--paper);color:var(--ink);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2.5rem;background:rgba(244,241,235,.94);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
+.nav-logo{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.1em;color:var(--accent);text-decoration:none}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:60px}
+.hero-left{padding:5rem 3rem 5rem 2.5rem;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--border)}
+.htag{display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:2rem}
+.htag::before{content:'';display:block;width:28px;height:1px;background:var(--accent)}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(2.8rem,5vw,4.8rem);line-height:1.0;letter-spacing:-.02em;margin-bottom:1.5rem}
+h1 em{font-style:italic;color:var(--accent)}
+.hsub{font-size:.975rem;line-height:1.75;color:var(--muted);max-width:44ch;margin-bottom:2.5rem}
+.hcta{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:.7rem 1.4rem;border-radius:4px;font-family:'Instrument Sans',sans-serif;font-size:13.5px;font-weight:500;cursor:pointer;text-decoration:none;transition:all .2s}
+.btn-p{background:var(--accent);color:#fff;border:none}.btn-p:hover{background:#b04024;transform:translateY(-1px)}
+.btn-g{background:transparent;color:var(--ink);border:1px solid var(--border)}.btn-g:hover{border-color:var(--ink);background:var(--cream)}
+.hero-right{background:var(--ink);padding:5rem 2.5rem;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.bgtext{position:absolute;top:2rem;right:1.5rem;font-family:'DM Serif Display',serif;font-size:clamp(5rem,12vw,11rem);line-height:.9;color:rgba(255,255,255,.03);user-select:none;pointer-events:none}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin-bottom:1.5rem}
+.sitem{padding:1.4rem;background:rgba(255,255,255,.025);transition:background .2s}.sitem:hover{background:rgba(255,255,255,.055)}
+.sn{font-family:'DM Serif Display',serif;font-size:2.4rem;color:#fff;line-height:1;margin-bottom:.3rem}.sn span{color:var(--accent)}
+.sl{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.32);font-family:'DM Mono',monospace}
+.badge{display:flex;align-items:center;gap:11px;padding:.9rem 1.2rem;border:1px solid rgba(255,255,255,.09);border-radius:6px;background:rgba(255,255,255,.035)}
+.av{width:38px;height:38px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px;color:#fff;flex-shrink:0}
+.bn{font-size:13.5px;color:#fff;font-weight:500}.br{font-size:11px;color:rgba(255,255,255,.38);font-family:'DM Mono',monospace;margin-top:1px}
+section{padding:5.5rem 2.5rem}
+.slabel{display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
+.slabel::before{content:'';display:block;width:16px;height:1px;background:var(--muted)}
+h2{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,3.2vw,2.8rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:.9rem}
+#sobre{border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
+.sticky{position:sticky;top:80px}
+.atext{font-size:.975rem;line-height:1.8;color:var(--muted)}.atext p+p{margin-top:1rem}.atext strong{color:var(--ink);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:1.75rem;list-style:none}
+.chip{padding:4px 12px;border:1px solid var(--border);border-radius:100px;font-size:11.5px;font-family:'DM Mono',monospace;color:var(--muted);background:var(--cream);transition:border-color .2s,color .2s}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+#modulos{background:var(--ink);color:#fff;border-top:1px solid var(--border)}
+#modulos h2{color:#fff}
+#modulos .slabel{color:rgba(255,255,255,.32)}
+#modulos .slabel::before{background:rgba(255,255,255,.32)}
+.mintro{font-size:.95rem;line-height:1.7;color:rgba(255,255,255,.4);max-width:52ch;margin-bottom:2.5rem}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);border-radius:12px;overflow:hidden}
+.mcard{background:rgba(255,255,255,.02);padding:1.75rem;display:flex;flex-direction:column;text-decoration:none;transition:background .2s;position:relative;overflow:hidden}
+.mcard:hover{background:rgba(255,255,255,.05)}
+.mcard::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--accent);transition:height .3s}
+.mcard:hover::before{height:100%}
+.mcard.soon{opacity:.35;pointer-events:none}
+.mnum{font-family:'DM Serif Display',serif;font-size:3.5rem;color:rgba(255,255,255,.04);line-height:1;position:absolute;top:.75rem;right:1.25rem;user-select:none}
+.mbadge{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:.75rem;width:fit-content}
+.mba{background:rgba(201,75,42,.12);color:#f09070;border:1px solid rgba(201,75,42,.2)}
+.mbs{background:rgba(255,255,255,.05);color:rgba(255,255,255,.28);border:1px solid rgba(255,255,255,.1)}
+.mtitle{font-family:'DM Serif Display',serif;font-size:1.2rem;color:#fff;line-height:1.2;margin-bottom:.5rem}
+.msub{font-size:12.5px;line-height:1.55;color:rgba(255,255,255,.35);flex:1}
+.mtopics{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem}
+.mtopic{font-size:11px;font-family:'DM Mono',monospace;padding:2px 8px;border-radius:100px;background:rgba(255,255,255,.05);color:rgba(255,255,255,.3)}
+.mfoot{display:flex;align-items:center;justify-content:space-between;margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.06)}
+.mcount{font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,.2)}
+.marr{font-size:13px;color:var(--accent)}
+#resumen{border-top:1px solid var(--border)}
+.rhead{display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.rsub-text{font-size:.9rem;line-height:1.7;color:var(--muted);max-width:54ch;margin-top:.5rem}
+.pdf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem}
+.pdf-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.75rem;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:box-shadow .2s,border-color .2s}
+.pdf-card:hover{border-color:rgba(201,75,42,.25);box-shadow:0 4px 24px rgba(201,75,42,.07)}
+.pdf-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--accent);transition:height .35s ease}
+.pdf-card:hover::before{height:100%}
+.pdf-card.soon{opacity:.45;pointer-events:none}
+.pdf-num{font-family:'DM Serif Display',serif;font-size:4rem;color:rgba(14,13,12,.04);line-height:1;position:absolute;top:.5rem;right:1rem;user-select:none}
+.pdf-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:.85rem;width:fit-content}
+.pdf-tag-ok{background:rgba(201,75,42,.07);color:var(--accent);border:1px solid rgba(201,75,42,.15)}
+.pdf-tag-soon{background:var(--cream);color:var(--muted);border:1px solid var(--border)}
+.pdf-title{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--ink);line-height:1.2;margin-bottom:.4rem}
+.pdf-meta{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-bottom:1rem}
+.pdf-desc{font-size:13px;line-height:1.65;color:var(--muted);flex:1;margin-bottom:1.4rem}
+.pdf-actions{display:flex;gap:8px;flex-wrap:wrap}
+.pdf-btn{display:inline-flex;align-items:center;gap:6px;padding:.55rem 1rem;border-radius:4px;font-family:'Instrument Sans',sans-serif;font-size:12.5px;font-weight:500;text-decoration:none;cursor:pointer;transition:all .18s}
+.pdf-ver{background:var(--accent);color:#fff;border:none}.pdf-ver:hover{background:#b04024;transform:translateY(-1px)}
+.pdf-dl{background:transparent;color:var(--ink);border:1px solid var(--border)}.pdf-dl:hover{border-color:var(--ink);background:var(--cream)}
+#test{background:var(--cream);border-top:1px solid var(--border)}
+.ttop{display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}
+.tsel{display:flex;gap:8px}
+.tsb{padding:7px 18px;border:1px solid var(--border);border-radius:100px;background:var(--card);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--muted);cursor:pointer;transition:all .2s}
+.tsb.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.scoring{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:2rem}
+.srow{padding:.9rem 1rem;border-radius:6px;border:1px solid var(--border);background:var(--card)}
+.spts{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);line-height:1}
+.scal{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin:.3rem 0 0;color:var(--muted)}
+.qwrap{border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--card)}
+.qtop{background:var(--ink);padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.qtitle{font-family:'DM Serif Display',serif;font-size:1.1rem;color:#fff}
+.qctr{font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.35)}
+.qbar{height:3px;background:rgba(255,255,255,.08)}
+.qfill{height:100%;background:var(--accent);transition:width .4s ease}
+.qbody{padding:1.75rem}
+.qbloque{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:rgba(201,75,42,.07);color:var(--accent);border:1px solid rgba(201,75,42,.15);padding:3px 10px;border-radius:100px;margin-bottom:1rem}
+.qtext{font-size:1rem;line-height:1.65;font-weight:500;color:var(--ink);margin-bottom:1.4rem}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;align-items:flex-start;gap:11px;padding:.8rem 1rem;border:1px solid var(--border);border-radius:6px;cursor:pointer;transition:all .15s;font-size:13.5px;line-height:1.5;color:var(--ink);background:var(--card)}
+.opt:hover{border-color:rgba(201,75,42,.3);background:rgba(201,75,42,.02)}
+.opt.correct{border-color:rgba(22,135,75,.4);background:rgba(22,135,75,.06);color:#0d6e3f}
+.opt.wrong{border-color:rgba(200,50,30,.35);background:rgba(200,50,30,.05);color:#9b2212}
+.opt.disabled{cursor:default}
+.ol{width:22px;height:22px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);flex-shrink:0;transition:all .15s}
+.opt.correct .ol{background:#0d6e3f;border-color:#0d6e3f;color:#fff}
+.opt.wrong .ol{background:#9b2212;border-color:#9b2212;color:#fff}
+.exp{margin:1rem 1.75rem 0;padding:.9rem 1.1rem;background:rgba(14,13,12,.04);border-left:3px solid var(--accent);border-radius:0 5px 5px 0;font-size:12.5px;line-height:1.6;color:var(--muted);display:none}
+.exp.show{display:block}
+.qfoot{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem;border-top:1px solid var(--border);background:var(--cream)}
+.qscore{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted)}
+.rpanel{text-align:center;padding:3.5rem 2rem;display:none}
+.rpanel.show{display:block}
+.rbig{font-family:'DM Serif Display',serif;font-size:5.5rem;color:var(--accent);line-height:1;margin-bottom:.5rem}
+.rcal{font-family:'DM Serif Display',serif;font-size:1.6rem;margin-bottom:.5rem}
+.rsub{font-size:13.5px;color:var(--muted);margin-bottom:2rem}
+#contacto{border-top:1px solid var(--border);text-align:center}
+.ci{max-width:580px;margin:0 auto}
+.cemail{display:inline-block;font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,3.5vw,2.8rem);color:var(--ink);text-decoration:none;letter-spacing:-.02em;border-bottom:2px solid var(--accent);padding-bottom:3px;margin:2rem 0;transition:color .2s}
+.cemail:hover{color:var(--accent)}
+.socials{display:flex;justify-content:center;gap:2rem;list-style:none;margin-top:1.75rem}
+.socials a{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.07em;color:var(--muted);text-decoration:none;transition:color .2s}
+.socials a:hover{color:var(--accent)}
+footer{padding:1.25rem 2.5rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--paper)}
+.fc,.ft{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.04em}
+@keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.fu{animation:fu .6s ease both}.fu1{animation-delay:.1s}.fu2{animation-delay:.22s}.fu3{animation-delay:.36s}.fu4{animation-delay:.5s}
+@media(max-width:780px){.hero{grid-template-columns:1fr}.hero-right{min-height:55vh}#sobre{grid-template-columns:1fr;gap:2rem}nav{padding:.9rem 1.25rem}.nav-links{display:none}section{padding:3.5rem 1.25rem}.hero-left{padding:3rem 1.25rem}.scoring{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">RRHH · UE</a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre mí</a></li>
+    <li><a href="#modulos">Módulos</a></li>
+    <li><a href="#resumen">Resúmenes</a></li>
+    <li><a href="#test">Tests</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="htag fu fu1">Máster Dirección y Gestión de RRHH · Universidad Europea</div>
+    <h1 class="fu fu2">Recursos<br>del <em>máster,</em><br>en abierto</h1>
+    <p class="hsub fu fu3">Resúmenes por bloques y tests interactivos de todos los módulos. Creado por una compañera que también es desarrolladora web — para que los apuntes no mueran en un PDF olvidado.</p>
+    <div class="hcta fu fu4">
+      <a href="#modulos" class="btn btn-p">Ver módulos →</a>
+      <a href="#test" class="btn btn-g">Hacer el test</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="bgtext">RR<br>HH</div>
+    <div class="sgrid">
+      <div class="sitem"><div class="sn">4</div><div class="sl">Módulos</div></div>
+      <div class="sitem"><div class="sn">80<span>+</span></div><div class="sl">Preguntas test</div></div>
+      <div class="sitem"><div class="sn">14<span>+</span></div><div class="sl">Bloques temáticos</div></div>
+      <div class="sitem"><div class="sn">100<span>%</span></div><div class="sl">Gratis</div></div>
+    </div>
+    <div class="badge">
+      <div class="av">MR</div>
+      <div><div class="bn">Melina Rivera</div><div class="br">Psicóloga · Full Stack Dev · Máster RRHH · UE</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="sticky">
+    <div class="slabel">Quién soy</div>
+    <h2>Dos mundos,<br>una persona</h2>
+  </div>
+  <div>
+    <div class="atext">
+      <p>Soy <strong>psicóloga clínica</strong> de formación, <strong>desarrolladora web full stack</strong> por vocación y actualmente estudio el <strong>Máster en Dirección y Gestión de RRHH</strong> en la Universidad Europea.</p>
+      <p>La programación siempre me ha apasionado — es algo en lo que me sigo formando constantemente. Creo que entender a las personas desde la psicología y construir herramientas digitales desde el código son dos formas distintas de resolver los mismos problemas: los de las organizaciones y las personas que las forman.</p>
+      <p>Esta página la construí desde cero para que los materiales del máster no se pierdan en un PDF olvidado. Si te resulta útil o quieres aportar algo, <strong>escríbeme sin dudarlo.</strong></p>
+    </div>
+    <ul class="chips">
+      <li class="chip">psicología clínica</li><li class="chip">gestión del cambio</li>
+      <li class="chip">diversidad e inclusión</li><li class="chip">competencias</li>
+      <li class="chip">liderazgo agile</li><li class="chip">employer branding</li>
+      <li class="chip">html · css · js</li><li class="chip">react</li><li class="chip">node.js</li><li class="chip">full stack</li>
+    </ul>
+  </div>
+</section>
+
+<section id="modulos">
+  <div class="slabel">Contenidos</div>
+  <h2>Todos los módulos</h2>
+  <p class="mintro">Haz clic en cualquier módulo para ir directo a su PDF o test.</p>
+  <div class="mgrid">
+    <a href="#resumen" class="mcard">
+      <div class="mnum">1</div>
+      <span class="mbadge mba">Disponible</span>
+      <div class="mtitle">RR.HH. y Empresa</div>
+      <div class="msub">Modelo de negocio Canvas, estructuras organizativas, procesos, gestión del desempeño, CMI, estadística aplicada y experiencia del empleado.</div>
+      <div class="mtopics"><span class="mtopic">Canvas</span><span class="mtopic">Porter</span><span class="mtopic">CMI</span><span class="mtopic">eNPS</span><span class="mtopic">ART©</span></div>
+      <div class="mfoot"><span class="mcount">7 bloques · 14 temas · 40 preguntas</span><span class="marr">→</span></div>
+    </a>
+    <a href="#resumen" class="mcard">
+      <div class="mnum">2</div>
+      <span class="mbadge mba">Disponible</span>
+      <div class="mtitle">Gestión Estratégica de RR.HH.</div>
+      <div class="msub">Gestión del cambio, conocimiento organizacional, diversidad intergeneracional, liderazgo colaborativo, competencias y Agile en RRHH.</div>
+      <div class="mtopics"><span class="mtopic">VUCA</span><span class="mtopic">Dunning-Kruger</span><span class="mtopic">Competencias</span><span class="mtopic">OKRs</span></div>
+      <div class="mfoot"><span class="mcount">6 bloques · 27 temas · 40 preguntas</span><span class="marr">→</span></div>
+    </a>
+    <a href="#resumen" class="mcard">
+      <div class="mnum">3</div>
+      <span class="mbadge mba">Disponible</span>
+      <div class="mtitle">Marco Jurídico de la Función de RR.HH.</div>
+      <div class="msub">Derecho laboral, contrato de trabajo, negociación colectiva y relaciones sindicales.</div>
+      <div class="mtopics"><span class="mtopic">ET</span><span class="mtopic">Convenios</span><span class="mtopic">LOLS</span></div>
+      <div class="mfoot"><span class="mcount">PDF disponible</span><span class="marr">→</span></div>
+    </a>
+    <a href="#resumen" class="mcard">
+      <div class="mnum">4</div>
+      <span class="mbadge mba">Disponible</span>
+      <div class="mtitle">Gestión de Personas y Procesos de RR.HH.</div>
+      <div class="msub">Selección, onboarding, formación, compensación, people analytics y digitalización de RRHH.</div>
+      <div class="mtopics"><span class="mtopic">Selección</span><span class="mtopic">Analytics</span><span class="mtopic">Retribución</span></div>
+      <div class="mfoot"><span class="mcount">PDF disponible</span><span class="marr">→</span></div>
+    </a>
+  </div>
+</section>
+
+<section id="resumen">
+  <div class="rhead">
+    <div>
+      <div class="slabel">Apuntes de estudio</div>
+      <h2>Resúmenes en PDF</h2>
+      <p class="rsub-text">Los apuntes de cada módulo en formato PDF, listos para descargar o consultar en el navegador.</p>
+    </div>
+  </div>
+
+  <div class="pdf-grid">
+
+    <!-- M1 -->
+    <div class="pdf-card">
+      <div class="pdf-num">1</div>
+      <span class="pdf-tag pdf-tag-ok">Disponible</span>
+      <div class="pdf-title">M1 · RR.HH. y Empresa</div>
+      <div class="pdf-meta">7 bloques · 14 temas · PDF completo</div>
+      <div class="pdf-desc">Canvas, Porter, cadena de valor, estructuras organizativas, procesos, gestión del desempeño, CMI, estadística aplicada y experiencia del empleado.</div>
+      <div class="pdf-actions">
+        <a class="pdf-btn pdf-ver" href="pdfs/m1-rrhh-empresa.pdf" target="_blank">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 1v10M3 7l5 5 5-5M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Ver PDF
+        </a>
+        <a class="pdf-btn pdf-dl" href="pdfs/m1-rrhh-empresa.pdf" download>
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2M8 1v8M5 6l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Descargar
+        </a>
+      </div>
+    </div>
+
+    <!-- M2 -->
+    <div class="pdf-card">
+      <div class="pdf-num">2</div>
+      <span class="pdf-tag pdf-tag-ok">Disponible</span>
+      <div class="pdf-title">M2 · Gestión Estratégica de RR.HH.</div>
+      <div class="pdf-meta">6 bloques · 27 temas · PDF completo</div>
+      <div class="pdf-desc">Gestión del cambio, conocimiento organizacional, diversidad intergeneracional, liderazgo colaborativo, gestión por competencias y Agile en RRHH.</div>
+      <div class="pdf-actions">
+        <a class="pdf-btn pdf-ver" href="pdfs/m2-gestion-estrategica.pdf" target="_blank">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 1v10M3 7l5 5 5-5M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Ver PDF
+        </a>
+        <a class="pdf-btn pdf-dl" href="pdfs/m2-gestion-estrategica.pdf" download>
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2M8 1v8M5 6l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Descargar
+        </a>
+      </div>
+    </div>
+
+    <!-- M3 -->
+    <div class="pdf-card">
+      <div class="pdf-num">3</div>
+      <span class="pdf-tag pdf-tag-ok">Disponible</span>
+      <div class="pdf-title">M3 · Marco Jurídico de la Función de RR.HH.</div>
+      <div class="pdf-meta">PDF completo</div>
+      <div class="pdf-desc">Derecho laboral, contrato de trabajo, negociación colectiva y relaciones sindicales.</div>
+      <div class="pdf-actions">
+        <a class="pdf-btn pdf-ver" href="pdfs/m3-marco-juridico.pdf" target="_blank">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 1v10M3 7l5 5 5-5M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Ver PDF
+        </a>
+        <a class="pdf-btn pdf-dl" href="pdfs/m3-marco-juridico.pdf" download>
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2M8 1v8M5 6l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Descargar
+        </a>
+      </div>
+    </div>
+
+    <!-- M4 -->
+    <div class="pdf-card">
+      <div class="pdf-num">4</div>
+      <span class="pdf-tag pdf-tag-ok">Disponible</span>
+      <div class="pdf-title">M4 · Gestión de Personas y Procesos de RR.HH.</div>
+      <div class="pdf-meta">PDF completo</div>
+      <div class="pdf-desc">Selección, onboarding, formación, compensación, people analytics y digitalización de RRHH.</div>
+      <div class="pdf-actions">
+        <a class="pdf-btn pdf-ver" href="pdfs/m4-gestion-personas.pdf" target="_blank">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 1v10M3 7l5 5 5-5M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Ver PDF
+        </a>
+        <a class="pdf-btn pdf-dl" href="pdfs/m4-gestion-personas.pdf" download>
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2M8 1v8M5 6l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Descargar
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="test">
+  <div class="ttop">
+    <div><div class="slabel">Test de autoevaluación</div><h2>Pon a prueba<br>lo que sabes</h2></div>
+    <div class="tsel">
+      <button class="tsb active" onclick="loadTest(1,this)">Módulo 1</button>
+      <button class="tsb" onclick="loadTest(2,this)">Módulo 2</button>
+    </div>
+  </div>
+  <div class="scoring">
+    <div class="srow"><div class="spts">36–40</div><div class="scal">Sobresaliente 🎯</div></div>
+    <div class="srow"><div class="spts">30–35</div><div class="scal">Notable ✅</div></div>
+    <div class="srow"><div class="spts">24–29</div><div class="scal">Aprobado 📖</div></div>
+    <div class="srow"><div class="spts">&lt;24</div><div class="scal">Suspenso 🔁</div></div>
+  </div>
+  <div class="qwrap">
+    <div class="qtop">
+      <span class="qtitle" id="qtitle">Módulo 1 · RR.HH. y Empresa</span>
+      <span class="qctr" id="qctr">1 / 40</span>
+    </div>
+    <div class="qbar"><div class="qfill" id="qfill" style="width:2.5%"></div></div>
+    <div id="qarea" class="qbody"></div>
+    <div id="qexp" class="exp"></div>
+    <div class="qfoot">
+      <span class="qscore" id="qscore">Correctas: 0 | Falladas: 0</span>
+      <button class="btn btn-p" id="qnext" onclick="nextQ()" style="display:none">Siguiente →</button>
+    </div>
+    <div class="rpanel" id="rpanel">
+      <div class="rbig" id="rbig"></div>
+      <div class="rcal" id="rcal"></div>
+      <div class="rsub" id="rsub"></div>
+      <button class="btn btn-p" onclick="restartTest()">Repetir test</button>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="ci">
+    <div class="slabel" style="justify-content:center">Hablemos</div>
+    <h2>¿Te ha sido útil?<br>Escríbeme</h2>
+    <a href="mailto:melina.rivera@gmail.com" class="cemail">melina.rivera@gmail.com</a>
+    <p style="font-size:14px;color:var(--muted);line-height:1.7">Si tienes apuntes que compartir, encuentras un error o simplemente quieres hablar de RRHH, psicología o código, estoy por aquí.</p>
+    <ul class="socials">
+      <li><a href="https://www.linkedin.com/in/deliamelinarivera" target="_blank">LinkedIn</a></li>
+      <li><a href="https://github.com/melinarivera" target="_blank">GitHub</a></li>
+      <li><a href="https://melinarivera.github.io" target="_blank">Portfolio</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <span class="fc">© 2025 · Melina Rivera · Recursos con fines académicos</span>
+  <span class="ft">HTML · CSS · JS · mucho café</span>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// === TEST ===
+
+// === TEST DATA ===
+const T={
+1:{title:'Módulo 1 · RR.HH. y Empresa',qs:[
+{b:'A · Negocio',q:'¿Cuál es la finalidad última del Modelo de Negocio Canvas?',o:['Definir el organigrama jerárquico.','Representar cómo la empresa genera valor diferencial conectando su oferta con el mercado para derivar hacia una rentabilidad económica sostenible.','Establecer los procedimientos internos de producción.','Medir la satisfacción de los empleados.'],a:1,e:'El Canvas conecta propuesta de valor con demanda buscando rentabilidad económica sostenible. No es un organigrama ni un procedimiento interno.'},
+{b:'A · Negocio',q:'En el Canvas, la "Estructura de Costes" se asocia con:',o:['La eficacia del modelo (cuánto ingresa).','La segmentación de clientes.','La eficiencia del modelo (valoración de los gastos para operar).','La propuesta de valor diferencial.'],a:2,e:'Estructura de Costes → eficiencia (gastos). Fuentes de Ingreso → eficacia (lo que entra). Son los dos extremos financieros del Canvas.'},
+{b:'A · Negocio',q:'En el Modelo Porter, ¿qué nivel "analiza y decide en qué negocios quiere estar" la empresa?',o:['Estrategia Competitiva.','Estrategia Funcional.','Estrategia Organizativa.','Estrategia Corporativa.'],a:3,e:'Corporativa = en qué negocios estar. Competitiva = cómo competir dentro de esos negocios.'},
+{b:'A · Negocio',q:'En la Cadena de Valor de Porter, los procesos de soporte:',o:['Tienen impacto directo en el margen.','Permiten el funcionamiento de los de negocio; los de negocio crean valor directo para el cliente.','Tienen el mismo impacto que los de negocio.','Son más fáciles de externalizar.'],a:1,e:'Procesos primarios (negocio) → impacto directo en cliente. Soporte (RRHH, Finanzas, TI) → habilitan a los primarios dotándoles de recursos.'},
+{b:'B · Estructuras',q:'¿Cuáles son las tres variables clave del diseño organizativo?',o:['Tecnología, recursos financieros y número de empleados.','Estrategia, procesos y cultura.','Jerarquía, procedimientos y objetivos.','Innovación, marketing y producción.'],a:1,e:'Estrategia (modelo de negocio) + Procesos (cadena de valor) + Cultura (hábitos de comportamiento). Sin las tres, el diseño organizativo falla.'},
+{b:'B · Estructuras',q:'El mecanismo de integración basado en "establecimiento de objetivos" se caracteriza por:',o:['Definir a priori todos los comportamientos mediante normas.','Concentrar todas las decisiones en la jerarquía.','Dar autonomía (empowerment) asegurando el cumplimiento de prioridades mediante metas compartidas.','Separar a las personas en "pensantes" y "actuantes".'],a:2,e:'El CMI da empowerment situando la decisión donde se origina la información, alineando a toda la organización mediante 4 perspectivas de objetivos.'},
+{b:'B · Estructuras',q:'La estructura MATRICIAL se caracteriza principalmente por:',o:['Una única línea de mando jerárquica.','Equipos de proyecto sin jerarquía formal.','Múltiple jefatura con dos o más dimensiones de autoridad.','Centros de servicios compartidos.'],a:2,e:'La matricial superpone dos ejes de autoridad. Su ventaja es la flexibilidad; su riesgo, el conflicto de prioridades y la ambigüedad de poder.'},
+{b:'B · Estructuras',q:'Principal ventaja de la estructura DIVISIONAL frente a la FUNCIONAL:',o:['Mayor especialización técnica.','Mayor visibilidad y eficacia en la adecuación al mercado, con respuesta rápida.','Menor número de niveles jerárquicos.','Reducción de costes por shared services.'],a:1,e:'La divisional crea unidades semiautónomas por producto/geografía/cliente que responden mejor a los cambios del mercado y soportan bien el crecimiento.'},
+{b:'C · Procesos',q:'El criterio de "EFICIENCIA" en el diseño de procesos implica que:',o:['El resultado satisface los objetivos marcados.','El proceso es capaz de adaptarse a los cambios del entorno.','La transformación de inputs en outputs se produce con la mínima utilización de recursos posible.','El proceso tiene el mayor número de pasos de control.'],a:2,e:'Eficacia = conseguir los objetivos. Eficiencia = mínimo uso de recursos. Flexibilidad = adaptarse al cambio. Los tres criterios deben equilibrarse.'},
+{b:'C · Procesos',q:'Un "contrato de servicio interno" es:',o:['Un contrato laboral especial para empleados de soporte.','Un acuerdo escrito que establece el nivel de servicio entre una unidad proveedora y una unidad cliente interna.','Un procedimiento para reclamaciones de clientes externos.','Un documento que fija objetivos anuales unilateralmente.'],a:1,e:'El contrato interno de servicio establece compromisos específicos con indicadores de gestión para mejorar el funcionamiento de la cadena de valor interna.'},
+{b:'D · Desempeño',q:'El principio de "SIN SORPRESAS" significa que:',o:['Los objetivos nunca pueden modificarse.','En la evaluación final no debe aparecer ninguna opinión que no haya sido comunicada previamente.','El directivo no debe revelar los puntos fuertes al empleado.','Los resultados deben ser confidenciales.'],a:1,e:'El feedback debe ser continuo durante el año para que la revisión final sea una conversación natural, sin juicios imprevistos para ninguna de las partes.'},
+{b:'D · Desempeño',q:'El 7.º y ÚLTIMO elemento del sistema de Gestión del Desempeño es:',o:['La fijación de objetivos al inicio del período.','El seguimiento a mitad del período.','El plan de acción personal con acciones de mejora, hitos y responsabilidades.','La comunicación del sistema.'],a:2,e:'El séptimo elemento es el Plan de Acción: la evaluación NO termina con la entrevista. Debe concluir con un plan concreto de mejora para que tenga valor organizativo.'},
+{b:'E · CMI',q:'¿Cuándo se publica el Balanced Scorecard y quiénes son sus autores?',o:['1985, Donaldson Brown.','1992, Kaplan y Norton en Harvard Business Review.','2000, consultora Hay Group.','1960, evolución del Tableau de Bord.'],a:1,e:'Kaplan y Norton publican el BSC en 1992 (HBR), ampliando la visión financiera con clientes, procesos internos y aprendizaje y crecimiento.'},
+{b:'E · CMI',q:'La perspectiva de "APRENDIZAJE Y CRECIMIENTO" del CMI incluye:',o:['Rentabilidad sobre activos y ventas.','Captación y fidelización de clientes.','Mejora de procesos productivos.','El capital humano, de información y organizacional.'],a:3,e:'Aprendizaje y Crecimiento es la base del CMI: si las personas crecen, mejoran los procesos, lo que mejora clientes y resultados financieros. Es la perspectiva clave.'},
+{b:'E · CMI',q:'El Factor Bradford (absentismo individual) se calcula como:',o:['Días de ausencia / Horas laborales × 100.','Número de bajas × Días totales.','Número de bajas al cuadrado × Días totales (S² × D).','Horas de absentismo / Empleados × 100.'],a:2,e:'Factor Bradford = S² × D. Penaliza ausencias cortas y frecuentes (mayor S) porque son más desestabilizadoras para la organización que las largas y puntuales.'},
+{b:'F · Estadística',q:'¿Qué diferencia los "datos estructurados" de los "no estructurados" en RRHH?',o:['Los estructurados son del departamento de RRHH; los demás, no estructurados.','Los estructurados tienen modelo predefinido (salarios, fechas); los no estructurados carecen de modelo (emails, vídeos, imágenes).','Los estructurados solo sirven para análisis cualitativos.','No existe diferencia relevante.'],a:1,e:'Estructurados (20%): fechas, salarios, categorías. No estructurados (80%): textos, vídeos, emails. Gran potencial en People Analytics.'},
+{b:'F · Estadística',q:'Un coeficiente de Pearson r = 0,85 indica:',o:['No existe relación lineal.','Correlación negativa perfecta.','Correlación positiva fuerte: cuando una variable aumenta, la otra tiende a aumentar.','Relación parabólica.'],a:2,e:'r=1 positiva perfecta; r=0 sin relación lineal; r=-1 negativa perfecta. r=0,85 indica correlación positiva fuerte aunque no perfecta.'},
+{b:'F · Estadística',q:'¿Para qué sirve la REGRESIÓN LINEAL en datos de RRHH?',o:['Para calcular media, mediana y moda.','Para representar distribución de frecuencias.','Para calcular la correlación en el tiempo de dos series y predecir el valor de una variable conociendo el de la otra.','Para dividir la plantilla en grupos homogéneos.'],a:2,e:'La regresión lineal calcula la recta de mejor ajuste entre dos series y permite predicciones. Su fiabilidad está directamente ligada al coeficiente de Pearson r.'},
+{b:'G · EX',q:'¿Qué afirmación resume mejor la relación entre EX y CX?',o:['Son procesos independientes.','Mejorar la EX solo impacta en la retención de talento.','No es posible una Experiencia de Cliente excepcional con una pobre Experiencia de Empleado.','La CX siempre debe priorizarse sobre la EX.'],a:2,e:'Estudios de IBM, MIT Sloan y Méndez & Calleja confirman que los empleados comprometidos con buena EX generan mejores experiencias de cliente. Son interdependientes.'},
+{b:'G · EX',q:'En el eNPS, los empleados con puntuación 0-6 se clasifican como:',o:['Promotores.','Neutros.','Detractores: insatisfechos que probablemente no recomendarán la empresa.','Embajadores.'],a:2,e:'eNPS: Promotores (9-10), Neutros (7-8) y Detractores (0-6). Los detractores pueden estar desmotivados y pueden dañar la reputación de la organización.'},
+{b:'G · EX',q:'El primer paso del Modelo ART© de Employer Branding es:',o:['Comunicar la marca en redes sociales.','Medir el impacto con indicadores.','Definir la EVP alineada con la estrategia y la marca corporativa.','Analizar las estrategias de los competidores.'],a:2,e:'El Modelo ART© tiene 5 pasos: 1) Definir EVP, 2) Conocer talento/competidores, 3) Crear marca, 4) Comunicar y activar, 5) Evaluar impacto. Siempre empieza por la EVP.'},
+{b:'B · Estructuras',q:'Respecto al diseño de estructuras organizativas, ¿qué afirmación es CORRECTA?',o:['Existe un modelo óptimo universal.','La funcional es siempre la más adecuada para mercados cambiantes.','No existe un único modelo óptimo; el éxito depende más de las personas que de la estructura.','La matricial elimina el riesgo de conflictos de autoridad.'],a:2,e:'No existe una única solución. La clave del éxito de una empresa puede llevar al fracaso de otra. El éxito de la implantación está más ligado a las personas que a la estructura.'},
+{b:'C · Procesos',q:'¿Cuál es la diferencia entre proceso macro y proceso micro?',o:['El macro es ejecutado por una sola persona; el micro requiere varias unidades.','El macro es de amplio alcance y atraviesa diversas unidades; el micro es concreto y ejecutable normalmente por una sola persona.','El macro son los de negocio; el micro, los de soporte.','No hay diferencia relevante.'],a:1,e:'Proceso Macro: amplio alcance, intervienen varios puestos (p.ej. fabricación). Proceso Micro: pasos concretos ejecutables por una persona (p.ej. apertura de cuenta corriente).'},
+{b:'D · Desempeño',q:'¿Cuál es la definición correcta de la Gestión del Desempeño?',o:['Sistema anual de evaluación de resultados.','Proceso de mejora continua cuya base es el desarrollo de personas mediante competencias, comunicación integradora y evaluación de objetivos cuantitativos y cualitativos.','Herramienta de control para penalizar empleados.','Procedimiento de RRHH para gestionar altas y bajas.'],a:1,e:'La GdD es un proceso continuo (no un hito puntual), herramienta de comunicación, con foco en el potencial de las personas y los comportamientos colaborativos.'},
+{b:'A · Negocio',q:'La Estrategia Organizativa en el modelo Porter determina:',o:['Si la empresa compite por precio o diferenciación.','Los productos y servicios que ofrecerá al mercado.','La relación vertical (jerarquía) y horizontal (procesos) entre las personas para hacer competitivo el modelo de negocio.','Los canales de distribución y comunicación.'],a:2,e:'La Estrategia Organizativa es el pilar de la Estrategia Funcional. Determina cómo se estructuran las personas en el plano vertical (jerarquía) y horizontal (procesos).'},
+{b:'E · CMI',q:'Diferencia clave entre el CMI y el Cuadro de Mando Departamental de RR.HH.:',o:['El CMI solo tiene indicadores financieros; el de RRHH, solo de personas.','El CMI abarca la estrategia global (4 perspectivas); el CM de RRHH añade indicadores operativos propios del departamento.','Son equivalentes; solo cambia el nombre.','El CM de RRHH tiene más perspectivas que el CMI.'],a:1,e:'El CMI es herramienta estratégica global. El CM Departamental de RRHH es también operativo: mide la gestión diaria (selección, absentismo, formación, retribución...).'},
+{b:'B · Estructuras',q:'La Organización EN RED (Network) se diferencia de la DIVISIONAL en que:',o:['En la red las divisiones tienen más jerarquía sobre las áreas de soporte.','En la red se crean centros de servicios compartidos (RRHH, Finanzas, Jurídico) bajo relación cliente-proveedor sin jerarquía sobre las divisiones.','En la red no existen divisiones autónomas.','En la red la coordinación se hace solo mediante objetivos.'],a:1,e:'La clave de la red son los Shared Services Centres: unidades de soporte centralizadas sin jerarquía sobre las divisiones, que actúan como proveedores de servicios.'},
+{b:'C · Procesos',q:'¿En qué consiste la reingeniería de tipo "ENFOQUE COMPETITIVO"?',o:['Romper las reglas definiendo una nueva forma de operar.','Rediseñar procesos para reducción de costes en actividades no esenciales.','Alcanzar y superar la paridad competitiva de las empresas líderes mediante benchmarking.','Mejorar incrementalmente sin cambios radicales.'],a:2,e:'El enfoque competitivo busca igualar y superar a los líderes del sector (benchmarking). La innovación radical va más allá: rompe las reglas y crea nuevos estándares de mercado.'},
+{b:'G · EX',q:'Dimensión del EXI que hace referencia a "energía, entusiasmo y emoción en el trabajo":',o:['Pertenencia.','Logro.','Propósito.','Vigor.'],a:3,e:'Las 5 dimensiones del EXI: Pertenencia, Propósito, Logro, Felicidad y Vigor. El Vigor se refiere específicamente a la presencia de energía, entusiasmo y emoción.'},
+{b:'G · EX',q:'En el Ciclo de Vida del Empleado, el Onboarding tiene como objetivo principal:',o:['Publicar la oferta y filtrar candidaturas.','Socializar al nuevo empleado, familiarizarle con sus funciones y cultura, apoyándose en mentores o buddies.','Evaluar el desempeño al final del primer año.','Gestionar el proceso de desvinculación.'],a:1,e:'El Onboarding es la fase en que el candidato se incorpora, socializa y se familiariza con sus funciones. Los mentores/buddies atienden necesidades emocionales y profesionales.'},
+{b:'F · Estadística',q:'¿Qué gráfico es más apropiado para mostrar la distribución de frecuencias de edades de la plantilla?',o:['Gráfico circular.','Gráfico de líneas.','Histograma.','Gráfico de dispersión.'],a:2,e:'El histograma representa la distribución de frecuencias con barras unidas. Es idóneo para visualizar grupos de edad o antigüedad porque muestra la forma de la distribución.'},
+{b:'E · CMI',q:'La "Tasa de Estabilidad" en el CM de RR.HH. mide:',o:['El porcentaje de empleados sin baja médica.','La proporción de contratos indefinidos respecto al total.','El número medio de años de antigüedad.','El porcentaje de empleados con evaluación positiva.'],a:1,e:'Tasa de Estabilidad = (N.º contratos indefinidos / N.º total de contratos) × 100. Indicador clave de la estabilidad del empleo en la organización.'},
+{b:'F · Estadística',q:'La MEDIANA de una serie estadística es:',o:['El cociente entre la suma de todos los datos y el número de observaciones.','El valor que más veces se repite.','El valor que ocupa el lugar central de la serie ordenada.','La raíz cuadrada de la media de las desviaciones al cuadrado.'],a:2,e:'Media = promedio aritmético. Mediana = valor central de la serie ordenada. Moda = valor más frecuente. Desviación estándar = dispersión respecto a la media.'},
+{b:'D · Desempeño',q:'¿Qué diferencia los objetivos CUANTITATIVOS de los CUALITATIVOS?',o:['Los cuantitativos miden competencias blandas; los cualitativos, resultados financieros.','Los cuantitativos se refieren al "QUÉ obtener" (resultados); los cualitativos al "CÓMO obtenerlo" (competencias y comportamientos).','Los cuantitativos solo se aplican a directivos.','Los cuantitativos tienen mayor peso en la evaluación.'],a:1,e:'Cuantitativos: resultados de negocio (volumen, margen…). Cualitativos: forma de trabajar a través del Perfil de Competencias con comportamientos observables.'},
+{b:'B · Estructuras',q:'La Organización DE PROYECTO / NODAL se caracteriza porque:',o:['Refuerza la unidad organizativa tradicional.','La unidad organizativa pierde relevancia en favor del equipo de proyecto, temporal y sin jerarquía formal.','Se convierte en el principal mecanismo de integración.','Se transforma en un centro de servicios compartidos.'],a:1,e:'En la estructura nodal, el equipo de proyecto es la unidad central. Existe liderazgo de coordinación, no jerárquico. Los especialistas trabajan de forma temporal conjunta.'},
+{b:'A · Negocio',q:'¿Qué rol tiene RRHH en la Cadena de Valor de Porter?',o:['Proceso primario con impacto directo en el cliente.','Proceso de soporte que habilita a los procesos de negocio: Selección, Desempeño, Formación, Compensación y Diseño organizativo.','No aparece en la cadena de valor de Porter.','Proceso de negocio equivalente a producción y ventas.'],a:1,e:'RRHH es proceso de soporte (secundario): Selección e Incorporación, Gestión del Desempeño, Formación y Desarrollo, Compensación y Carrera, y Diseño organizativo.'},
+{b:'E · CMI',q:'Los 3 pilares de la estrategia del Departamento de RRHH son:',o:['Planificar, ejecutar y controlar.','Alineación con la empresa, coherencia con el sector y visión temporal completa.','Selección, formación y retribución.','Comunicar, motivar y evaluar.'],a:1,e:'Los 3 pilares: Alineación con la estrategia general, Coherencia con el sector (benchmarking) y Visión temporal completa (operativo + medio + largo plazo).'},
+{b:'C · Procesos',q:'La cultura de orientación al cliente interno implica:',o:['Solo los procesos de negocio deben orientarse al cliente.','Romper la estanqueidad funcional, generar actitud de servicio y clarificar roles desde la perspectiva del cliente interno.','Externalizar todos los procesos de soporte.','El cliente externo define directamente los procedimientos internos.'],a:1,e:'La cultura de cliente interno implica: romper compartimentos estanco, actitud de servicio, clarificar roles, mejorar continuamente y fomentar el intercambio de conocimientos.'},
+{b:'G · EX',q:'Los principales impulsores del eNPS según BEX 2022 son:',o:['Salario, vacaciones, oficina, formación, parking y seguros.','Retribución, aprendizaje en el puesto, condiciones laborales, gestión de situaciones difíciles, reconocimiento y flexibilidad/conciliación.','Beneficios sociales, estabilidad, cultura, diversidad, liderazgo y comunicación.','Marca, producto, colegas, manager, misión y valores.'],a:1,e:'Principales impulsores del eNPS: Retribución · Aprendizaje en el puesto · Condiciones laborales · Gestión de situaciones difíciles · Reconocimiento · Flexibilidad y conciliación.'}
+]},
+2:{title:'Módulo 2 · Gestión Estratégica de RR.HH.',qs:[
+{b:'A · Cambio',q:'¿Cuál es la secuencia correcta de la REACCIÓN NEGATIVA al cambio?',o:['Enfado → Negación → Depresión → Aceptación.','Inmovilización → Negación → Depresión → Enfado → Negociación → Exploración → Aceptación.','Negación → Inmovilización → Enfado → Exploración → Aceptación.','Depresión → Inmovilización → Negación → Exploración → Aceptación.'],a:1,e:'La curva del cambio negativo: Inmovilización (confusión/bloqueo) → Negación → Depresión → Enfado → Negociación → Exploración → Aceptación.'},
+{b:'A · Cambio',q:'¿Cuándo debe iniciarse la Gestión del Cambio?',o:['Cuando el cambio comienza a ejecutarse.','Seis meses después de implantado.','Desde el primer momento en que se tiene información de que el cambio va a producirse.','Solo cuando los empleados muestran resistencia.'],a:2,e:'La proactividad es la mejor estrategia. La GdC no se inicia cuando el cambio tiene lugar, sino desde que se tiene conocimiento de que va a producirse.'},
+{b:'A · Cambio',q:'¿Cuáles son los 4 tipos principales de cambio?',o:['Planificados, emergentes, reactivos y proactivos.','Económicos, sociales, tecnológicos y políticos.','Funcionales, tecnológicos, jerárquicos y de estrategia.','De producto, precio, distribución y comunicación.'],a:2,e:'Los 4 tipos: Funcionales (variación de funciones), Tecnológicos (IA, digitalización), Jerárquicos (categoría profesional) y De Estrategia (modificación del plan ante cambios del entorno).'},
+{b:'A · Cambio',q:'Los 3 aspectos fundamentales de la estrategia para gestionar el cambio son:',o:['Comunicar, formar y evaluar.','Crear un clima de cambio · Involucrar y habilitar a la organización · Implementar y sostener la transformación.','Planificar, ejecutar y controlar.','Analizar, diagnosticar y actuar.'],a:1,e:'Los tres aspectos: (1) Crear un clima de cambio, (2) Involucrar y habilitar a la organización, (3) Implementar y sostener la transformación.'},
+{b:'A · Cambio',q:'¿Qué consecuencia tiene no gestionar el cambio?',o:['Permite que el cambio se consolide naturalmente.','Retrasos, errores costosos, descenso de productividad, mal clima laboral y fuga de talento.','Minimiza el impacto negativo.','Favorece que los empleados desarrollen resiliencia autónoma.'],a:1,e:'Sin GdC: retrasos, errores que aumentan costes, descenso de productividad, mal clima, paralización de actividades, pérdida de recursos intangibles y fuga de talento.'},
+{b:'B · Conocimiento',q:'Diferencia fundamental entre INFORMACIÓN y CONOCIMIENTO:',o:['Son términos sinónimos.','La información son datos organizados que pueden transmitirse; el conocimiento son nociones que permiten interpretar la realidad y tomar mejores decisiones.','El conocimiento siempre es más fácil de transmitir.','La información siempre es explícita; el conocimiento siempre es tácito.'],a:1,e:'"No toda la información es conocimiento." Un documento en un idioma desconocido es información pero no genera conocimiento si no puede interpretarse.'},
+{b:'B · Conocimiento',q:'¿Qué tipo de conocimiento corresponde a experiencias personales, destrezas y valores?',o:['Conocimiento explícito.','Conocimiento organizacional.','Conocimiento tácito.','Conocimiento específico.'],a:2,e:'El conocimiento tácito es intangible y personal: experiencias vividas, destrezas, valores, pensamientos. No puede almacenarse fácilmente, lo que lo hace valioso y difícil de transferir.'},
+{b:'B · Conocimiento',q:'¿En qué consiste el EFECTO DUNNING-KRUGER?',o:['Las personas muy competentes sobreestiman sus capacidades.','Las personas con pocos conocimientos sobrevaloran sus capacidades; las muy competentes tienden a infravalorarse.','A más conocimiento, más seguridad.','El conocimiento explícito siempre supera al tácito.'],a:1,e:'Dunning y Kruger demostraron que la incompetencia impide reconocerse como incompetente, mientras los muy competentes son conscientes de cuánto queda por aprender.'},
+{b:'B · Conocimiento',q:'La GAMIFICACIÓN como técnica de gestión del conocimiento se basa en:',o:['Crear procedimientos muy detallados para estandarizar el aprendizaje.','Emplear mecánicas de juego en entornos no lúdicos, combinando distracción, motivación y reconocimiento de logros.','Organizar comunidades de expertos de forma estructurada.','Desarrollar storytelling de forma emocional.'],a:1,e:'La gamificación combina distracción, motivación y reconocimiento de logros. Fomenta el esfuerzo, el aprendizaje de errores y los comportamientos colaborativos.'},
+{b:'B · Conocimiento',q:'La técnica de LECCIONES APRENDIDAS consiste en:',o:['Impartir cursos online sobre mejores prácticas.','Registrar y analizar experiencias positivas y negativas para evitar repetir errores y replicar éxitos.','Convertir datos en relatos para facilitar su retención.','Crear grupos donde los empleados compiten por generar ideas.'],a:1,e:'Las Lecciones Aprendidas registran experiencias con el análisis de sus causas y soluciones, para que los mismos resultados se repliquen o los errores no vuelvan a cometerse.'},
+{b:'B · Conocimiento',q:'La "Smart Knowledge Management" se distingue por:',o:['Limitarse al conocimiento explícito.','Integrar IA y neurociencia para convertir datos en conocimiento, con un ámbito más global que abarca también a las personas individualmente.','Centrarse solo en comunidades de práctica internas.','Ser una versión simplificada de la GC tradicional.'],a:1,e:'La Smart KM integra IA y neurociencia, no se limita a las organizaciones sino que aplica procesos para que cada persona gestione mejor sus conocimientos.'},
+{b:'B · Conocimiento',q:'Diferencia entre COMUNIDAD DE CONOCIMIENTO y COMUNIDAD DE PRÁCTICA:',o:['Son términos intercambiables.','La CP es un nivel más avanzado con organización, roles y procesos bien definidos; la CC es un estadio previo menos formal.','La CC es el nivel avanzado; la CP, el inicial.','La CP está formada solo por directivos.'],a:1,e:'Comunidad de conocimiento (colaboración informal) → Comunidad de práctica (roles y procesos formalizados). Varias comunidades de práctica pueden formar una Red de Conocimiento.'},
+{b:'C · Diversidad',q:'¿Cómo define Casanova (IEGD) la gestión de la diversidad?',o:['Un conjunto de medidas legales para evitar discriminación.','Una estrategia corporativa orientada a la creación de un soporte incluyente para perfiles diversos que optimiza la eficacia empresarial.','Un programa de RSC exclusivamente para colectivos vulnerables.','La política de igualdad de género impuesta por la ley.'],a:1,e:'Para Casanova, la diversidad es una estrategia corporativa (no solo legal) que optimiza la eficacia empresarial a través de un clima de satisfacción para empleados diversos.'},
+{b:'C · Diversidad',q:'La "paradoja del talento femenino" hace referencia a que:',o:['Las mujeres tienen menores tasas de éxito académico.','Las mujeres representan más del 50% de los graduados universitarios pero menos del 10% de los consejos de dirección.','Las mujeres son más productivas a tiempo parcial.','Las mujeres prefieren no acceder a cargos directivos.'],a:1,e:'La paradoja del talento femenino: mayor éxito académico femenino pero sistemáticamente infrarrepresentadas en la alta dirección. Brecha salarial media UE: 16%.'},
+{b:'C · Diversidad',q:'¿Cuáles son las 5 generaciones en el mercado laboral español?',o:['Gen X, Y, Z, Alfa y Beta.','Veteranos (hasta 1953), Baby Boomers (1954-69), Gen X (1970-81), Gen Y (1982-92) y Gen Z (1993-2000).','Generación Silenciosa, Baby Boomers, Jones, Millennials y Centennials.','Generación de la Guerra, Posguerra, Transición, Digitalización y Globalización.'],a:1,e:'En España conviven 5 generaciones: Veteranos, Baby Boomers, Gen X, Gen Y y Gen Z. Sus cronologías difieren del modelo americano en aproximadamente 10 años.'},
+{b:'C · Diversidad',q:'El "presentismo laboral" en España implica:',o:['Los españoles trabajan menos horas con mayor productividad.','La eficiencia se asocia más al tiempo de presencia que a los resultados, generando más horas pero menor productividad.','Las empresas priorizan el trabajo en remoto.','Los empleados presentan más horas de forma voluntaria.'],a:1,e:'Los españoles trabajaron 332 horas más que los alemanes en 2016 pero con una productividad 11,4 puntos porcentuales inferior. Presencia ≠ productividad.'},
+{b:'D · Liderazgo',q:'¿Qué se entiende por "liderazgo colaborativo"?',o:['El modelo basado en la autoridad jerárquica formal.','Aquel que contribuye activamente a la implicación del equipo, abandona la jerarquía y se basa en la formulación de preguntas reconociendo la dificultad de presentar respuestas.','El estilo coercitivo que garantiza disciplina.','Un modelo aplicable solo a Gen Y y Z.'],a:1,e:'El liderazgo colaborativo abandona la jerarquía. No desempeñará la función de líder el más brillante, sino el que tenga más capacidad para hacer brillar al resto.'},
+{b:'D · Liderazgo',q:'¿Cuál es la primera característica del "líder ideal" según los colaboradores?',o:['Orientación estricta a resultados.','Capacidad de control y supervisión.','Ser comunicativo con escucha activa y cercanía empática.','Experiencia técnica profunda.'],a:2,e:'El ranking del líder ideal sitúa en primer lugar la comunicación con escucha activa y empatía, por delante de la orientación a resultados.'},
+{b:'D · Liderazgo',q:'El "Reverse Mentoring" consiste en:',o:['Directivos seniors mentorizan a jóvenes en visión de negocio.','Un joven profesional (Gen Y o Z) mentoriza a un directivo senior en competencias ligadas al uso de las TIC.','Un proceso de rotación entre generaciones.','Una técnica de evaluación 360º intergeneracional.'],a:1,e:'El Reverse Mentoring invierte el rol tradicional: el joven nativo digital mentoriza al directivo senior en TIC. Herramienta clave para la transferencia de conocimiento bidireccional.'},
+{b:'D · Liderazgo',q:'Las dos generaciones con MAYOR DESAJUSTE entre autopercepción y percepción de sus colaboradores son:',o:['Veteranos y Gen X.','Gen Y y Gen Z.','Baby Boomers y Gen Y.','Gen X y Gen Z.'],a:2,e:'Baby Boomers (se ven dedicados/experimentados; les ven como controladores) y Gen Y (se ven resultadistas; les ven como cortoplacistas e inexpertos en gestión de equipos).'},
+{b:'E · Competencias',q:'Según McClelland (1975), el éxito laboral depende principalmente de:',o:['El cociente intelectual y tests de aptitud.','La titulación académica y años de experiencia.','Las competencias: Saber, Saber hacer, Saber estar, Querer hacer, Poder hacer.','La capacidad para adaptarse a procedimientos.'],a:2,e:'McClelland demostró que los rasgos fijos no predicen el éxito profesional. Las competencias —la combinación de saber, saber hacer, saber estar, querer y poder hacer— son los verdaderos predictores.'},
+{b:'E · Competencias',q:'En el Modelo Iceberg, ¿qué parte es "difícil de desarrollar" y debe considerarse en la SELECCIÓN?',o:['Los conocimientos técnicos y habilidades (superficie).','Los estándares de rendimiento.','La autoimagen, valores, rasgos de personalidad y motivos (parte sumergida).','Los procedimientos del manual de funciones.'],a:2,e:'El Iceberg: conocimientos y habilidades (superficie) son fáciles de desarrollar vía formación. La base sumergida (autoimagen, valores, rasgos, motivos) es difícil de cambiar y debe considerarse en selección.'},
+{b:'E · Competencias',q:'Diferencia entre FORMACIÓN y DESARROLLO:',o:['La formación es más cara.','La formación aumenta conocimientos a corto plazo con perspectiva técnica; el desarrollo potencia comportamientos a largo plazo con plano estratégico y seguimiento imprescindible.','El desarrollo se aplica solo a directivos.','Son términos equivalentes.'],a:1,e:'Formación: conocimientos, corto plazo, perspectiva técnica. Desarrollo: comportamientos, largo plazo, estratégico, seguimiento imprescindible.'},
+{b:'E · Competencias',q:'Según HayGroup, las competencias DIFERENCIADORAS son:',o:['Las necesarias para un desempeño mínimamente adecuado.','Las comunes a todos los puestos.','Las que potencian a personas con desempeño superior frente a las de desempeño promedio.','Las tan específicas que no pueden transferirse.'],a:2,e:'HayGroup distingue: Umbral (mínimo necesario), Diferenciadoras (distinguen al excelente del promedio), Genéricas (válidas para muchos puestos) y Específicas (solo para un puesto).'},
+{b:'E · Competencias',q:'Según Goleman, ¿qué valoraban principalmente los empresarios en más de 5.000 puestos?',o:['Conocimientos técnicos y titulaciones específicas.','Años de experiencia y conocimiento del producto.','Capacidad para aprender, escuchar y comunicarse, adaptación, autocontrol y habilidades sociales.','Resultados numéricos y cumplimiento de procedimientos.'],a:2,e:'Goleman identificó 6 aspectos: capacidad para aprender, escuchar y comunicarse, adaptación y creatividad, autocontrol y motivación, relacionarse en grupo, y eficacia en la organización.'},
+{b:'F · Agile',q:'¿Qué representan las siglas VUCA?',o:['Velocidad, Utilidad, Competencia y Agentes.','Volatilidad, Incertidumbre (Uncertainty), Complejidad y Ambigüedad.','Valor, Usuarios, Código y Arquitectura.','Verificación, Uniformidad, Control y Adaptabilidad.'],a:1,e:'VUCA: Volatilidad (muchos cambios frecuentes), Incertidumbre (difícil predecir), Complejidad (múltiples factores interconectados) y Ambigüedad (falta de significado claro).'},
+{b:'F · Agile',q:'¿Qué diferencia a una organización ÁGIL de una simplemente "rápida"?',o:['La ágil tiene más empleados.','La ágil combina rapidez + flexibilidad para adaptarse; la rápida solo es veloz en lo que ya sabe hacer.','La ágil prescinde de toda jerarquía.','La ágil aplica solo metodologías de software.'],a:1,e:'Ágil = rápido + flexible. Un tren de alta velocidad es rápido pero no ágil. Una lancha es más ágil que un crucero aunque vaya más lento.'},
+{b:'F · Agile',q:'Las 3 motivaciones intrínsecas de D. Pink son:',o:['Salario, reconocimiento y seguridad laboral.','Autonomía, Propósito y Maestría.','Competición, Recompensa y Status.','Obediencia, Rutina y Estabilidad.'],a:1,e:'Pink identifica: Autonomía (decidir sobre el trabajo), Propósito (sentido de lo que se hace) y Maestría (perfeccionar habilidades). Más poderosas que las motivaciones extrínsecas.'},
+{b:'F · Agile',q:'Los perfiles en forma de "T" en una empresa ágil se caracterizan por:',o:['Conocimiento profundo en un área sin visión general.','Ser completamente generalistas.','Conocimiento profundo en un área + conocimiento general en áreas relacionadas.','Ser exclusivamente directivos coordinadores.'],a:2,e:'Los perfiles en T combinan especialización profunda (palo vertical) con conocimiento general en áreas relacionadas (palo horizontal). Son los más adecuados para equipos ágiles.'},
+{b:'F · Agile',q:'¿Qué significa "Learnability" o aprendibilidad?',o:['La capacidad de la empresa para aprender de errores pasados.','La habilidad de una persona para adquirir conocimientos de forma autónoma y continua, reforzando su empleabilidad.','El conjunto de cursos de formación obligatoria.','La velocidad a la que una organización absorbe nuevas tecnologías.'],a:1,e:'La learnability es la habilidad para adquirir conocimientos de forma autónoma, sin depender de un instructor. Refuerza la empleabilidad en entornos VUCA de cambio acelerado.'},
+{b:'C · Diversidad',q:'¿Qué es el envejecimiento activo según la OMS?',o:['El proceso de reducir la edad de jubilación.','El proceso de aprovechar al máximo las oportunidades para tener bienestar físico, psíquico y social durante toda la vida.','Un programa de incentivos para retener empleados mayores de 55.','La gestión de riesgos asociados a la mayor presencia de personas mayores.'],a:1,e:'La OMS define el envejecimiento activo como aprovechar al máximo las oportunidades de bienestar durante toda la vida. El objetivo es desligar vejez de dependencia.'},
+{b:'A · Cambio',q:'En la Metodología de 6 Etapas, ¿qué se desarrolla en la ETAPA II?',o:['Se elabora el diagnóstico final con las prioridades.','Se ejecuta el cambio con comité en tiempo real.','Se estudian las capacidades/actitudes de los afectados, se seleccionan impulsores y se realiza el análisis de riesgos con la matriz probabilidad × impacto.','Se da soporte post-cambio.'],a:2,e:'La Etapa II (Estudio y Análisis): estudio de los afectados, selección de impulsores del cambio, análisis de expectativas y de riesgos (amenaza + vulnerabilidad), y matriz de priorización.'},
+{b:'B · Conocimiento',q:'Un GESTOR DEL CONOCIMIENTO eficaz debe caracterizarse por:',o:['Preferir el trabajo individual y la competitividad.','Tener mentalidad muy abierta, gran habilidad analítica, proactividad y preferir la colaboración frente a la competitividad.','Centrarse exclusivamente en aspectos técnicos.','Mantener el conocimiento clave dentro de su área.'],a:1,e:'El Gestor del Conocimiento necesita: mente abierta, claridad en ideas, habilidad analítica, ser observador y proactivo, con baja tendencia al personalismo.'},
+{b:'C · Diversidad',q:'¿Cuáles son las tres categorías de causas de la diversidad contemporánea?',o:['Económicas, políticas y sociales.','Demográficas, culturales y funcionales/profesionales.','Tecnológicas, financieras y estratégicas.','Legales, sindicales y regulatorias.'],a:1,e:'Demográficas (incorporación femenina, envejecimiento, migraciones), Culturales (globalización, apertura de mercados) y Funcionales (innovación exige equipos multifuncionales).'},
+{b:'E · Competencias',q:'La técnica STAR (Entrevista por Incidentes Críticos) hace referencia a:',o:['Satisfacción, Tarea, Acción y Resultado.','Situación, Tarea, Acción y Resultado.','Sistema, Técnica, Análisis y Retroalimentación.','Saber, Talento, Actitud y Rendimiento.'],a:1,e:'STAR: Situación (contexto), Tarea (responsabilidad), Acción (qué hizo la persona) y Resultado (qué obtuvo). Identifica comportamientos pasados como predictor del desempeño futuro.'},
+{b:'F · Agile',q:'Los OKRs (Objectives & Key Results) son:',o:['Un sistema de evaluación del desempeño anual.','Un sistema de gestión por objetivos: Objective (qué conseguir) + Key Results (cómo medir el progreso), transparente y alineado en toda la organización.','Una metodología de formación Agile.','Un framework de desarrollo de software.'],a:1,e:'Los OKRs son un sistema de gestión por objetivos ambicioso y transparente. El Objective define qué conseguir; los Key Results, cómo medir el progreso hacia ese objetivo.'},
+{b:'D · Liderazgo',q:'La competencia del liderazgo intergeneracional se enmarca entre:',o:['La inteligencia lógica y la perspectiva financiera.','La inteligencia emocional y la perspectiva generacional.','La inteligencia estratégica y la perspectiva de mercado.','La inteligencia técnica y la perspectiva de procesos.'],a:1,e:'El liderazgo intergeneracional se enmarca entre la IE (para gestionar la diversidad emocional) y la perspectiva generacional (para entender motivaciones y comportamientos de cada generación).'},
+{b:'A · Cambio',q:'La RESILIENCIA en gestión del cambio se define como:',o:['Anticiparse a necesidades futuras antes de que los problemas aparezcan.','La habilidad de adaptarse positivamente a situaciones adversas, reforzada con el aprendizaje y viendo las dificultades de forma constructiva.','El estilo de liderazgo que fomenta la participación y el consenso.','La metodología para identificar y mitigar riesgos organizativos.'],a:1,e:'Resiliencia = adaptarse positivamente a situaciones adversas de forma constructiva. Se refuerza con el aprendizaje. No es solo aguantar, sino crecer a través de la adversidad.'}
+]}
+};
+
+let ct=1,cq=0,cor=0,wr=0,ans=false;
+
+function loadTest(n,btn){
+  ct=n;cq=0;cor=0;wr=0;ans=false;
+  document.querySelectorAll('.tsb').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  document.getElementById('qtitle').textContent=T[n].title;
+  document.getElementById('rpanel').classList.remove('show');
+  renderQ();
+}
+
+function renderQ(){
+  const qs=T[ct].qs,tot=qs.length;
+  if(cq>=tot){showResult();return;}
+  const q=qs[cq];
+  document.getElementById('qctr').textContent=`${cq+1} / ${tot}`;
+  document.getElementById('qfill').style.width=`${(cq/tot)*100}%`;
+  document.getElementById('qscore').textContent=`Correctas: ${cor} | Falladas: ${wr}`;
+  document.getElementById('qnext').style.display='none';
+  const exp=document.getElementById('qexp');exp.classList.remove('show');exp.textContent='';
+  ans=false;
+  const area=document.getElementById('qarea');
+  area.innerHTML=`<div class="qbloque">${q.b}</div><div class="qtext">${q.q}</div><div class="opts" id="opts">${q.o.map((o,i)=>`<div class="opt" id="op${i}" onclick="pick(${i})"><span class="ol">${['A','B','C','D'][i]}</span>${o}</div>`).join('')}</div>`;
+}
+
+function pick(i){
+  if(ans)return;ans=true;
+  const q=T[ct].qs[cq];
+  document.querySelectorAll('.opt').forEach(o=>o.classList.add('disabled'));
+  document.getElementById(`op${q.a}`).classList.add('correct');
+  if(i!==q.a){document.getElementById(`op${i}`).classList.add('wrong');wr++;}else cor++;
+  const exp=document.getElementById('qexp');exp.textContent='▸ '+q.e;exp.classList.add('show');
+  document.getElementById('qnext').style.display='';
+  document.getElementById('qscore').textContent=`Correctas: ${cor} | Falladas: ${wr}`;
+}
+
+function nextQ(){cq++;renderQ();}
+
+function showResult(){
+  document.getElementById('qarea').innerHTML='';
+  document.getElementById('qexp').classList.remove('show');
+  document.getElementById('qnext').style.display='none';
+  document.getElementById('qfill').style.width='100%';
+  const tot=T[ct].qs.length;
+  let cal,sub;
+  if(cor>=36){cal='Sobresaliente 🎯';sub='¡Dominio excelente! Estás más que preparado/a.';}
+  else if(cor>=30){cal='Notable ✅';sub='Buen nivel de conocimiento. Repasa los temas fallados.';}
+  else if(cor>=24){cal='Aprobado 📖';sub='Nivel suficiente. Refuerza los bloques más flojos.';}
+  else{cal='Suspenso 🔁';sub='Vuelve a los apuntes antes de repetir el test.';}
+  document.getElementById('rbig').textContent=`${cor}/${tot}`;
+  document.getElementById('rcal').textContent=cal;
+  document.getElementById('rsub').textContent=sub;
+  document.getElementById('rpanel').classList.add('show');
+}
+
+function restartTest(){cq=0;cor=0;wr=0;ans=false;document.getElementById('rpanel').classList.remove('show');renderQ();}
+
+document.addEventListener('DOMContentLoaded', renderQ);
+</script>
+</body>
+</html>
