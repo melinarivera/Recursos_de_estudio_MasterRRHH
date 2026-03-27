@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Recursos del Máster · RRHH · Universidad Europea</title>
+<title>Recursos del Máster · RRHH</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
@@ -42,7 +42,14 @@ section{padding:5.5rem 2.5rem}
 h2{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,3.2vw,2.8rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:.9rem}
 #sobre{border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start}
 .sticky{position:sticky;top:80px}
-.atext{font-size:.975rem;line-height:1.8;color:var(--muted)}.atext p+p{margin-top:1rem}.atext strong{color:var(--ink);font-weight:500}
+#sobre .sticky{display:flex;flex-direction:column;align-items:center;text-align:center}
+#sobre .slabel{font-size:13px;letter-spacing:.15em}
+.avatar-wrap{position:relative;width:160px;height:160px;margin-top:1.75rem}
+.avatar-ring{position:absolute;inset:-10px;border-radius:50%;border:1px solid rgba(201,75,42,.25);animation:spin 20s linear infinite}
+.avatar-ring::after{content:'';position:absolute;top:-4px;left:50%;width:7px;height:7px;background:var(--accent);border-radius:50%;transform:translateX(-50%)}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.avatar-circle{width:100%;height:100%;border-radius:50%;background:linear-gradient(135deg,var(--cream),var(--paper));border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:3.5rem}
+.atext{font-size:1.15rem;line-height:1.85;color:var(--muted)}.atext p+p{margin-top:1rem}.atext strong{color:var(--ink);font-weight:500}
 .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:1.75rem;list-style:none}
 .chip{padding:4px 12px;border:1px solid var(--border);border-radius:100px;font-size:11.5px;font-family:'DM Mono',monospace;color:var(--muted);background:var(--cream);transition:border-color .2s,color .2s}
 .chip:hover{border-color:var(--accent);color:var(--accent)}
@@ -141,7 +148,7 @@ footer{padding:1.25rem 2.5rem;border-top:1px solid var(--border);display:flex;al
 <body>
 
 <nav>
-  <a class="nav-logo" href="#">RRHH · UE</a>
+  <a class="nav-logo" href="#">RRHH</a>
   <ul class="nav-links">
     <li><a href="#sobre">Sobre mí</a></li>
     <li><a href="#modulos">Módulos</a></li>
@@ -153,7 +160,7 @@ footer{padding:1.25rem 2.5rem;border-top:1px solid var(--border);display:flex;al
 
 <section class="hero">
   <div class="hero-left">
-    <div class="htag fu fu1">Máster Dirección y Gestión de RRHH · Universidad Europea</div>
+    <div class="htag fu fu1">Máster Dirección y Gestión de RRHH</div>
     <h1 class="fu fu2">Recursos<br>del <em>máster,</em><br>en abierto</h1>
     <p class="hsub fu fu3">Resúmenes por bloques y tests interactivos de todos los módulos. Creado por una compañera que también es desarrolladora web — para que los apuntes no mueran en un PDF olvidado.</p>
     <div class="hcta fu fu4">
@@ -171,7 +178,7 @@ footer{padding:1.25rem 2.5rem;border-top:1px solid var(--border);display:flex;al
     </div>
     <div class="badge">
       <div class="av">MR</div>
-      <div><div class="bn">Melina Rivera</div><div class="br">Psicóloga · Full Stack Dev · Máster RRHH · UE</div></div>
+      <div><div class="bn">Melina Rivera</div><div class="br">Psicóloga · Full Stack Dev · Máster RRHH</div></div>
     </div>
   </div>
 </section>
@@ -179,7 +186,10 @@ footer{padding:1.25rem 2.5rem;border-top:1px solid var(--border);display:flex;al
 <section id="sobre">
   <div class="sticky">
     <div class="slabel">Quién soy</div>
-    <h2>Dos mundos,<br>una persona</h2>
+    <div class="avatar-wrap">
+      <div class="avatar-ring"></div>
+      <div class="avatar-circle">👩🏻‍💻</div>
+    </div>
   </div>
   <div>
     <div class="atext">
@@ -255,11 +265,11 @@ footer{padding:1.25rem 2.5rem;border-top:1px solid var(--border);display:flex;al
       <div class="pdf-meta">7 bloques · 14 temas · PDF completo</div>
       <div class="pdf-desc">Canvas, Porter, cadena de valor, estructuras organizativas, procesos, gestión del desempeño, CMI, estadística aplicada y experiencia del empleado.</div>
       <div class="pdf-actions">
-        <a class="pdf-btn pdf-ver" href="pdfs/m1-rrhh-empresa.pdf" target="_blank">
+        <a class="pdf-btn pdf-ver" href="pdf/m1-rrhh-empresa.pdf" target="_blank">
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 1v10M3 7l5 5 5-5M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Ver PDF
         </a>
-        <a class="pdf-btn pdf-dl" href="pdfs/m1-rrhh-empresa.pdf" download>
+        <a class="pdf-btn pdf-dl" href="pdf/m1-rrhh-empresa.pdf" download>
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2M8 1v8M5 6l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Descargar
         </a>
@@ -274,11 +284,11 @@ footer{padding:1.25rem 2.5rem;border-top:1px solid var(--border);display:flex;al
       <div class="pdf-meta">6 bloques · 27 temas · PDF completo</div>
       <div class="pdf-desc">Gestión del cambio, conocimiento organizacional, diversidad intergeneracional, liderazgo colaborativo, gestión por competencias y Agile en RRHH.</div>
       <div class="pdf-actions">
-        <a class="pdf-btn pdf-ver" href="pdfs/m2-gestion-estrategica.pdf" target="_blank">
+        <a class="pdf-btn pdf-ver" href="pdf/m2-gestion-estrategica.pdf" target="_blank">
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 1v10M3 7l5 5 5-5M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Ver PDF
         </a>
-        <a class="pdf-btn pdf-dl" href="pdfs/m2-gestion-estrategica.pdf" download>
+        <a class="pdf-btn pdf-dl" href="pdf/m2-gestion-estrategica.pdf" download>
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2M8 1v8M5 6l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Descargar
         </a>
@@ -293,11 +303,11 @@ footer{padding:1.25rem 2.5rem;border-top:1px solid var(--border);display:flex;al
       <div class="pdf-meta">PDF completo</div>
       <div class="pdf-desc">Derecho laboral, contrato de trabajo, negociación colectiva y relaciones sindicales.</div>
       <div class="pdf-actions">
-        <a class="pdf-btn pdf-ver" href="pdfs/m3-marco-juridico.pdf" target="_blank">
+        <a class="pdf-btn pdf-ver" href="pdf/m3-marco-juridico.pdf" target="_blank">
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 1v10M3 7l5 5 5-5M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Ver PDF
         </a>
-        <a class="pdf-btn pdf-dl" href="pdfs/m3-marco-juridico.pdf" download>
+        <a class="pdf-btn pdf-dl" href="pdf/m3-marco-juridico.pdf" download>
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2M8 1v8M5 6l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Descargar
         </a>
@@ -312,11 +322,11 @@ footer{padding:1.25rem 2.5rem;border-top:1px solid var(--border);display:flex;al
       <div class="pdf-meta">PDF completo</div>
       <div class="pdf-desc">Selección, onboarding, formación, compensación, people analytics y digitalización de RRHH.</div>
       <div class="pdf-actions">
-        <a class="pdf-btn pdf-ver" href="pdfs/m4-gestion-personas.pdf" target="_blank">
+        <a class="pdf-btn pdf-ver" href="pdf/m4-gestion-personas.pdf" target="_blank">
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M8 1v10M3 7l5 5 5-5M2 14h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Ver PDF
         </a>
-        <a class="pdf-btn pdf-dl" href="pdfs/m4-gestion-personas.pdf" download>
+        <a class="pdf-btn pdf-dl" href="pdf/m4-gestion-personas.pdf" download>
           <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2M8 1v8M5 6l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Descargar
         </a>
