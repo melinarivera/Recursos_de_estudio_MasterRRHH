@@ -32,10 +32,10 @@ h1 em{font-style:italic;color:var(--accent)}
 .sgrid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:8px;overflow:hidden;margin-bottom:1.5rem}
 .sitem{padding:1.4rem;background:rgba(255,255,255,.025);transition:background .2s}.sitem:hover{background:rgba(255,255,255,.055)}
 .sn{font-family:'DM Serif Display',serif;font-size:2.4rem;color:#fff;line-height:1;margin-bottom:.3rem}.sn span{color:var(--accent)}
-.sl{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255, 255, 255, 0.602);font-family:'DM Mono',monospace}
+.sl{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);font-family:'DM Mono',monospace}
 .badge{display:flex;align-items:center;gap:11px;padding:.9rem 1.2rem;border:1px solid rgba(255,255,255,.09);border-radius:6px;background:rgba(255,255,255,.035)}
 .av{width:38px;height:38px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px;color:#fff;flex-shrink:0}
-.bn{font-size:13.5px;color:#fff;font-weight:500}.br{font-size:11px;color:rgba(255, 255, 255, 0.599);font-family:'DM Mono',monospace;margin-top:1px}
+.bn{font-size:13.5px;color:#fff;font-weight:500}.br{font-size:11px;color:rgba(255,255,255,.6);font-family:'DM Mono',monospace;margin-top:1px}
 section{padding:5.5rem 2.5rem}
 .slabel{display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:.9rem}
 .slabel::before{content:'';display:block;width:16px;height:1px;background:var(--muted)}
@@ -69,7 +69,7 @@ h2{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,3.2vw,2.8rem);lin
 .mba{background:rgba(201,75,42,.12);color:#f09070;border:1px solid rgba(201,75,42,.2)}
 .mbs{background:rgba(255,255,255,.05);color:rgba(255,255,255,.28);border:1px solid rgba(255,255,255,.1)}
 .mtitle{font-family:'DM Serif Display',serif;font-size:1.2rem;color:#fff;line-height:1.2;margin-bottom:.5rem}
-.msub{font-size:12.5px;line-height:1.55;color:rgba(255, 255, 255, 0.58);flex:1}
+.msub{font-size:12.5px;line-height:1.55;color:rgba(255,255,255,.58);flex:1}
 .mtopics{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem}
 .mtopic{font-size:11px;font-family:'DM Mono',monospace;padding:2px 8px;border-radius:100px;background:rgba(255,255,255,.05);color:rgba(255,255,255,.3)}
 .mfoot{display:flex;align-items:center;justify-content:space-between;margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.06)}
@@ -97,9 +97,14 @@ h2{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,3.2vw,2.8rem);lin
 .pdf-dl{background:transparent;color:var(--ink);border:1px solid var(--border)}.pdf-dl:hover{border-color:var(--ink);background:var(--cream)}
 #test{background:var(--cream);border-top:1px solid var(--border)}
 .ttop{display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}
-.tsel{display:flex;gap:8px;flex-wrap:wrap}
+.tright{display:flex;flex-direction:column;gap:.75rem;align-items:flex-end}
+.tsel{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 .tsb{padding:7px 18px;border:1px solid var(--border);border-radius:100px;background:var(--card);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--muted);cursor:pointer;transition:all .2s}
 .tsb.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tpdf-bar{display:flex;align-items:center;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.tpdf-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.06em}
+.tpdf-btn{display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border-radius:100px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;text-decoration:none;color:var(--muted);border:1px solid var(--border);background:var(--card);transition:all .18s}
+.tpdf-btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(201,75,42,.04)}
 .scoring{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:2rem}
 .srow{padding:.9rem 1rem;border-radius:6px;border:1px solid var(--border);background:var(--card)}
 .spts{font-family:'DM Serif Display',serif;font-size:1.4rem;color:var(--ink);line-height:1}
@@ -142,13 +147,13 @@ footer{padding:1.25rem 2.5rem;border-top:1px solid var(--border);display:flex;al
 .fc,.ft{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.04em}
 @keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 .fu{animation:fu .6s ease both}.fu1{animation-delay:.1s}.fu2{animation-delay:.22s}.fu3{animation-delay:.36s}.fu4{animation-delay:.5s}
-@media(max-width:780px){.hero{grid-template-columns:1fr}.hero-right{min-height:55vh}#sobre{display:flex;flex-direction:column;gap:2rem}nav{padding:.9rem 1.25rem}.nav-links{display:none}section{padding:3.5rem 1.25rem}.hero-left{padding:3rem 1.25rem}.scoring{grid-template-columns:1fr 1fr}.sticky{position:static!important;top:auto!important;width:100%;align-items:center}.tsel{gap:6px}.tsb{padding:6px 12px;font-size:10px}}
+@media(max-width:780px){.hero{grid-template-columns:1fr}.hero-right{min-height:55vh}#sobre{display:flex;flex-direction:column;gap:2rem}nav{padding:.9rem 1.25rem}.nav-links{display:none}section{padding:3.5rem 1.25rem}.hero-left{padding:3rem 1.25rem}.scoring{grid-template-columns:1fr 1fr}.sticky{position:static!important;top:auto!important;width:100%;align-items:center}.tsel{gap:6px}.tsb{padding:6px 12px;font-size:10px}.tright{align-items:flex-start}.tpdf-bar{justify-content:flex-start}}
 </style>
 </head>
 <body>
 
 <nav>
-  <a class="nav-logo" href="#">Melina Rivvera - Máster RRHH</a>
+  <a class="nav-logo" href="#">Melina Rivera - Máster RRHH</a>
   <ul class="nav-links">
     <li><a href="#sobre">Sobre mí</a></li>
     <li><a href="#modulos">Módulos</a></li>
@@ -305,11 +310,21 @@ footer{padding:1.25rem 2.5rem;border-top:1px solid var(--border);display:flex;al
 <section id="test">
   <div class="ttop">
     <div><div class="slabel">Test de autoevaluación</div><h2>Pon a prueba<br>lo que sabes</h2></div>
-    <div class="tsel">
-      <button class="tsb active" onclick="loadTest(1,this)">Módulo 1</button>
-      <button class="tsb" onclick="loadTest(2,this)">Módulo 2</button>
-      <button class="tsb" onclick="loadTest(3,this)">Módulo 3</button>
-      <button class="tsb" onclick="loadTest(4,this)">Módulo 4</button>
+    <div class="tright">
+      <div class="tsel">
+        <button class="tsb active" onclick="loadTest(1,this)">Módulo 1</button>
+        <button class="tsb" onclick="loadTest(2,this)">Módulo 2</button>
+        <button class="tsb" onclick="loadTest(3,this)">Módulo 3</button>
+        <button class="tsb" onclick="loadTest(4,this)">Módulo 4</button>
+      </div>
+      <div class="tpdf-bar">
+        <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="flex-shrink:0"><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2M8 1v8M5 6l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="tpdf-label">Test en PDF:</span>
+        <a class="tpdf-btn" href="pdf/test-m1.pdf" download>M1</a>
+        <a class="tpdf-btn" href="pdf/test-m2.pdf" download>M2</a>
+        <a class="tpdf-btn" href="pdf/test-m3.pdf" download>M3</a>
+        <a class="tpdf-btn" href="pdf/test-m4.pdf" download>M4</a>
+      </div>
     </div>
   </div>
   <div class="scoring">
