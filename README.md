@@ -1,5 +1,7 @@
 # Recursos del Máster · RRHH 📚
 
+🌐 ** (https://melinarivera.github.io/Recursos_de_estudio_MasterRRHH/)**
+
 Página web con resúmenes en PDF y tests interactivos de todos los módulos del
 Máster en Dirección y Gestión de RRHH — Universidad Europea.
 
@@ -19,7 +21,7 @@ Máster en Dirección y Gestión de RRHH — Universidad Europea.
 - ✅ Barra de progreso y marcador en tiempo real
 - ✅ Calificación automática al terminar (Sobresaliente / Notable / Aprobado / Suspenso)
 - ✅ PDFs descargables por módulo
-- ✅ Responsive (funciona en móvil)
+- ✅ Responsive (funciona en celular)
 
 ## Estructura del proyecto
 ```
@@ -43,5 +45,5 @@ Creado por **Melina Rivera** — psicóloga, desarrolladora full stack
 y estudiante del máster. Con fines exclusivamente académicos y de
 uso libre entre compañeros.
 
-📬 melina.rivera@gmail.com
+📬 melina.rivera@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/deliamelinarivera)
