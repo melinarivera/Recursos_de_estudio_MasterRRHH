@@ -566,10 +566,11 @@ function showResult(){
   document.getElementById('qnext').style.display='none';
   document.getElementById('qfill').style.width='100%';
   const tot=T[ct].qs.length;
+  const pct=cor/tot;
   let cal,sub;
-  if(cor>=36){cal='Sobresaliente';sub='¡Dominio excelente! Estás más que preparado/a.';}
-  else if(cor>=30){cal='Notable';sub='Buen nivel de conocimiento. Repasa los temas fallados.';}
-  else if(cor>=24){cal='Aprobado';sub='Nivel suficiente. Refuerza los bloques más flojos.';}
+  if(pct>=0.9){cal='Sobresaliente';sub='¡Dominio excelente! Estás más que preparado/a.';}
+  else if(pct>=0.75){cal='Notable';sub='Buen nivel de conocimiento. Repasa los temas fallados.';}
+  else if(pct>=0.6){cal='Aprobado';sub='Nivel suficiente. Refuerza los bloques más flojos.';}
   else{cal='Suspenso';sub='Vuelve a los apuntes antes de repetir el test.';}
   document.getElementById('rbig').textContent=`${cor}/${tot}`;
   document.getElementById('rcal').textContent=cal;
